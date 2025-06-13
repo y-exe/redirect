@@ -1,3 +1,0 @@
-RewriteEngine On
-RewriteCond %{HTTP_HOST} ^(www\.)?ymkw\.yexe\.net$ [NC]
-RewriteRule ^(.*)$ https://github.com/y-exe/sugiyama-bot [L,R=301]
