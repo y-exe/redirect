@@ -2,15 +2,43 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Redirecting to yexe.net</title>
+  <title>Redirecting...</title>
   <link rel="canonical" href="https://yexe.net/"/>
   <meta http-equiv="refresh" content="0; url=https://yexe.net/">
+  <style>
+    body {
+      background-color: black;
+      margin: 0;
+      padding: 0;
+      font-family: sans-serif;
+    }
+    #fallback-message {
+      display: none; 
+      color: white;
+      text-align: center;
+      padding-top: 50px;
+    }
+    #fallback-message a {
+      color: #9bf; 
+    }
+  </style>
 </head>
 <body>
-  <h1>Redirecting to yexe.net</h1>
-  <p>
-    自動で読み込みます
-    follow this <a href="https://yexe.net/">link to yexe.net</a>.
-  </p>
+
+  <div id="fallback-message">
+    <p>リダイレクトに失敗しました。</p>
+    <p>以下のリンクをクリックしてください。</p>
+    <p><a href="https://yexe.net/">https://yexe.net/</a></p>
+  </div>
+
+  <script>
+    setTimeout(function() {
+      var messageElement = document.getElementById('fallback-message');
+      if (messageElement) {
+        messageElement.style.display = 'block';
+      }
+    }, 15000); 
+  </script>
+
 </body>
 </html>
